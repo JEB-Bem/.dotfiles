@@ -126,5 +126,13 @@
     "todolist.promptForReminder": false,
     "coc-actions.hideCursor": false,
     "coc-actions.showActionKind": true,
-    "clangd.inlayHints.enabled": false
+    "clangd.inlayHints.enabled": false,
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.parameterTypes": false,
+    "workspace.ignoredFolders": [
+      "$HOME",
+      "$HOME/.cargo/**",
+      "$HOME/.rustup/**"
+    ]
 }

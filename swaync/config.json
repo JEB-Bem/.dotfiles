@@ -1,0 +1,165 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "overlay",
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+  "cssPriority": "application",
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 10,
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "relative-timestamps": false,
+  "control-center-width": 500,
+  "control-center-height": 600,
+  "notification-window-width": 500,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "text-empty": "Welcome, Jeb",
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    },
+    "clickMail": {
+      "exec": "/home/jebhim/.config/swaync/scripts/toggleMail.sh",
+      "app-name": "Thunderbird",
+      "urgency": "Normal",
+      "run-on": "action"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "mpris",
+    "title",
+    "notifications",
+    "volume",
+    "backlight",
+    "buttons-grid"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "󰆴"
+    },
+    "mpris": {
+      "image-size": 80,
+      "image-radius": 0
+    },
+    "volume": {
+      "label": "󰕾 "
+    },
+    "backlight": {
+      "label": "󰃟 "
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰖁",
+          "type": "toggle",
+          "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+          "update-command": "~/.config/swaync/scripts/muteStatus.sh"
+        },
+        {
+          "label": "󰋍",
+          "type": "normal",
+          "command": "systemsettings kcm_pulseaudio"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "nm-applet"
+        },
+        {
+          "label": "󰂱",
+          "type": "normal",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "󰖂",
+          "type": "toggle",
+          "active": true,
+          "command": "pkill clash-verge || clash-verge"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "command": "swaync-client -d"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "active": false,
+          "command": "pkill hypridle || hypridle"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "~/.config/swaync/scripts/openHtop.sh"
+        },
+        {
+          "label": "󱧦",
+          "type": "toggle",
+          "command": "st"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "command": "st"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "systemctl hibernate"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "hyprlock"
+        },
+        {
+          "label": "󰒲",
+          "type": "normal",
+          "command": "systemctl suspend"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "reboot"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "shutdown now"
+        },
+        {
+          "label": "󰛮",
+          "type": "normal",
+          "command": "~/.config/swaync/scripts/toggleMail.sh"
+        }
+      ]
+    }
+  }
+}

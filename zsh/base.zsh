@@ -9,8 +9,14 @@ alias h='history 0'
 alias hibernate='systemctl hibernate'
 alias t='trans :zh -brief -v -e bing'
 alias code='function _code() { command code "$1" --ozone-platform-hint-auto --enable-wayland-ime; }; _code'
+alias open='xdg-open'
 # 不是很好用，因为没有多少 Man Page 是提供中文的
 # alias man='/usr/local/bin/man_for_jeb.sh'
+
+# ========== Aliyun 相关配置 ==========
+export ALIREG=crpi-lfo3n3v4ixm5buc6.cn-qingdao.personal.cr.aliyuncs.com/ali-mirror-source
+alias alireg-login='docker login --username=aliyun1223898996 crpi-lfo3n3v4ixm5buc6.cn-qingdao.personal.cr.aliyuncs.com'
+# =====================================
 
 # === 一些快捷键 ===
 
@@ -29,6 +35,9 @@ export MANPAGER='nvim +IndentLinesDisable +Man!'
 alias v='nvim'
 alias vim='nvim'
 alias vi='nvim'
+
+# 设置默认 pager
+# export PAGER=nvim
 
 # 通用别名
 alias ls='ls --color=auto'
@@ -60,6 +69,9 @@ eval "$(pyenv init -)"
 
 # 010 Editor 路径
 export PATH="$PATH:/home/jebhim/my_packages/010editor"
+
+# texlive Path
+export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
 
 # Anaconda 配置
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=true

@@ -12,3 +12,11 @@ source ~/.dotfiles/zsh/fzf.zsh
 source ~/.dotfiles/zsh/base.zsh
 
 . "$HOME/.local/share/../bin/env"
+
+# pnpm
+export PNPM_HOME="/home/jebhim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
