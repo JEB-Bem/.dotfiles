@@ -70,9 +70,6 @@ eval "$(pyenv init -)"
 # 010 Editor 路径
 export PATH="$PATH:/home/jebhim/my_packages/010editor"
 
-# texlive Path
-export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
-
 # Anaconda 配置
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=true
 
