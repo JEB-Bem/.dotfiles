@@ -10,6 +10,7 @@ alias hibernate='systemctl hibernate'
 alias t='trans :zh -brief -v -e bing'
 alias code='function _code() { command code "$1" --ozone-platform-hint-auto --enable-wayland-ime; }; _code'
 alias open='xdg-open'
+alias ref='/usr/local/bin/pacman_updates.sh'
 # 不是很好用，因为没有多少 Man Page 是提供中文的
 # alias man='/usr/local/bin/man_for_jeb.sh'
 
@@ -130,5 +131,5 @@ preexec_yay_confirmation() {
 }
 
 # 添加 preexec 钩子
-autoload -Uz add-zsh-hook
-add-zsh-hook preexec preexec_yay_confirmation
+# autoload -Uz add-zsh-hook
+# add-zsh-hook preexec preexec_yay_confirmation
