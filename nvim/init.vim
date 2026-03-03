@@ -63,7 +63,6 @@ let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set laststatus=2
 set autochdir
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 set clipboard=
 " set clipboard=unnamedplus
 vnoremap Y "+y
@@ -162,7 +161,7 @@ if !exists('g:vscode')
     
     " Markdown
     Plug 'dhruvasagar/vim-table-mode' " Markdown table plug.
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
     
     " Other visual enhancement
     Plug 'Yggdroot/indentLine'
