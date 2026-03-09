@@ -148,7 +148,8 @@ if !exists('g:vscode')
     
     " beautiful status bar
     " Plug 'vim-airline/vim-airline'
-     Plug 'echasnovski/mini.statusline'
+    " Plug 'echasnovski/mini.statusline'
+    Plug 'nvim-lualine/lualine.nvim'
     
     " Plug 'connorholyday/vim-snazzy'
     Plug 'junegunn/vim-peekaboo'
@@ -192,8 +193,9 @@ if !exists('g:vscode')
     Plug 'fadein/vim-FIGlet'
     
     " theme
-    Plug 'morhetz/gruvbox'
+    " Plug 'morhetz/gruvbox'
     Plug 'folke/tokyonight.nvim'
+    Plug 'RRethy/base16-nvim'
     
     " Auto Complete
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -211,25 +213,30 @@ if !exists('g:vscode')
     " Snippets
     Plug 'honza/vim-snippets'
 
+    " Git
+    Plug 'lewis6991/gitsigns.nvim'
     call plug#end()
+
+    " 导入 lua 配置
+    " lua require("config")
     
     " Theme configuration
-    if has('nvim')
-        colorscheme tokyonight-storm
-        " statusline
-        lua require('mini.statusline').setup()
-        highlight Normal guibg=NONE ctermbg=None
-        " linenumber
-        highlight CursorLineNr guifg=#00EFEE ctermfg=25
-        highlight LineNrAbove  guifg=#9DA8CF          " 设置普通行号的颜色
-        highlight LineNrBelow  guifg=#9DA8CF          " 设置普通行号的颜色
-    else
-        " Gruvbox config
-        colorscheme gruvbox
-        set background=dark
-        " let g:gruvbox_transparent_bg = 1
-        highlight Normal guibg=NONE ctermbg=None
-    endif
+    " colorscheme tokyonight-storm
+    colorscheme base16-catppuccin
+    " statusline
+    " lua require('mini.statusline').setup()
+    lua require('lualine').setup()
+
+    " 设置选中文本反色
+    highlight Visual gui=reverse cterm=reverse
+    " highlight Normal guibg=NONE ctermbg=None
+    " linenumber
+    " highlight CursorLineNr guifg=#00EFEE ctermfg=25
+    " 下面两行自动将背景设置为 NONE
+    " highlight LineNrAbove  guifg=#9DA8CF          " 设置普通行号的颜色
+    " highlight LineNrBelow  guifg=#9DA8CF          " 设置普通行号的颜色
+    " highlight LineNrAbove  guifg=#575369 guibg=NONE          " 设置普通行号的颜色
+    " highlight LineNrBelow  guifg=#575369 guibg=NONE          " 设置普通行号的颜色
     
     
     " ===
@@ -617,9 +624,10 @@ if !exists('g:vscode')
     " ===
     let g:vimtex_view_method = 'zathura'
 
+    " ===
+    " === .ejs syntax highlight
+    " ===
+    au BufNewFile,BufRead *.ejs set filetype=html
+
 endif
 
-" ===
-" === .ejs syntax highlight
-" ===
-au BufNewFile,BufRead *.ejs set filetype=html
