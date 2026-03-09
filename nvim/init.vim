@@ -90,7 +90,7 @@ map s <nop>
 map Q :q<CR>
 " REPLACE has been covered.
 " Ues VREPLACE instead.
-map R :source $MYVIMRC<CR>
+nnoremap R :source $MYVIMRC \| doautocmd FileType<CR>
 
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
@@ -207,6 +207,10 @@ if !exists('g:vscode')
     
     " Vimtex
     Plug 'lervag/vimtex'
+
+    " Snippets
+    Plug 'honza/vim-snippets'
+
     call plug#end()
     
     " Theme configuration
