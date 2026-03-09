@@ -613,6 +613,7 @@ if !exists('g:vscode')
     nnoremap <C-s>r :RG<CR>
     nnoremap <C-s>l :Lines<CR>
     nnoremap <C-s>b :BLines<CR>
+    nnoremap <leader>p :History<CR>
     
     " ===
     " === My customed function with bingding
