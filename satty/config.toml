@@ -2,3 +2,13 @@
 copy-command = "wl-copy"
 focus-toggles-toolbars = true
 actions-on-right-click = ["save-to-clipboard"]
+
+[font]
+family = "WenQuanYi Zen Hei"
+style = "Regular"
+
+fallback = [
+    "Noto Sans SC",
+    "Noto Sans CJK SC",  # 不知道有没有区别
+    "Twemoji"
+]
