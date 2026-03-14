@@ -222,13 +222,18 @@ if !exists('g:vscode')
     
     " Theme configuration
     " colorscheme tokyonight-storm
-    colorscheme base16-catppuccin
+    if &background ==# 'dark'
+        colorscheme base16-catppuccin
+    else
+        colorscheme base16-catppuccin-latte
+    endif
+
     " statusline
     " lua require('mini.statusline').setup()
     lua require('lualine').setup()
 
     " 设置选中文本反色
-    highlight Visual gui=reverse cterm=reverse
+    highlight Visual gui=reverse,nocombine cterm=reverse,nocombine
     " highlight Normal guibg=NONE ctermbg=None
     " linenumber
     " highlight CursorLineNr guifg=#00EFEE ctermfg=25
@@ -568,7 +573,7 @@ if !exists('g:vscode')
     augroup filetype_indent_override
       autocmd!
       autocmd FileType python   setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-      autocmd FileType c,cpp    setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+      autocmd FileType c,cpp    setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
       autocmd FileType make     setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=0
       autocmd FileType javascript,html,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
     augroup END
