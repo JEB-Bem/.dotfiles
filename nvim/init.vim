@@ -477,7 +477,7 @@ if !exists('g:vscode')
     " valid: `/path/with\ space/xxx`
     " invalid: `/path/with\\ space/xxx`
     " default: ''
-    let g:mkdp_browser = '/usr/bin/chromium'
+    let g:mkdp_browser = '/usr/bin/google-chrome-stable'
     
     " set to 1, echo preview page URL in command line when opening preview page
     " default is 0
@@ -573,7 +573,7 @@ if !exists('g:vscode')
     augroup filetype_indent_override
       autocmd!
       autocmd FileType python   setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-      autocmd FileType c,cpp    setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+      autocmd FileType c,cpp    setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
       autocmd FileType make     setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=0
       autocmd FileType javascript,html,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
     augroup END
@@ -614,7 +614,7 @@ if !exists('g:vscode')
     " === FZF.vim configuration
     " ===
     nnoremap <C-s>f :Files<CR>
-    nnoremap <C-s>g :Files ~<CR>
+    nnoremap <C-s>g :GFiles<CR>
     nnoremap <C-s>r :RG<CR>
     nnoremap <C-s>l :Lines<CR>
     nnoremap <C-s>b :BLines<CR>
