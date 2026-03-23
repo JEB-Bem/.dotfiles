@@ -32,6 +32,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" set ttimeoutlen from 50 to 25 (ms)
+set ttimeoutlen=25
+
 " Add from coc.nvim's recommend configure
 
 set updatetime=300
@@ -215,6 +218,10 @@ if !exists('g:vscode')
 
     " Git
     Plug 'lewis6991/gitsigns.nvim'
+
+    " fcitx input method toggle when type ESC
+    Plug 'rlue/vim-barbaric'
+
     call plug#end()
 
     " 导入 lua 配置
@@ -312,7 +319,7 @@ if !exists('g:vscode')
           \ CheckBackspace() ? "\<Tab>" :
           \ coc#refresh()
     inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-    
+
     " Make <CR> to accept selected completion item or notify coc.nvim to format
     " <C-g>u breaks current undo, please make your own choice
     inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
