@@ -135,5 +135,9 @@
       "$HOME/.cargo/**",
       "$HOME/.rustup/**"
     ],
-    "snippets.ultisnips.pythonPrompt": false
+    "snippets.ultisnips.pythonPrompt": false,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/21.1.8/clangd_21.1.8/bin/clangd",
+    "clangd.arguments": [
+    "--fallback-style=Google",
+  ]
 }
