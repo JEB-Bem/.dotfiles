@@ -134,5 +134,6 @@
       "$HOME",
       "$HOME/.cargo/**",
       "$HOME/.rustup/**"
-    ]
+    ],
+    "snippets.ultisnips.pythonPrompt": false
 }

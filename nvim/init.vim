@@ -630,7 +630,7 @@ if !exists('g:vscode')
     " ===
     " === My customed function with bingding
     " ===
-    source ~/.vim/customed_Func-Bind.vim
+    source ~/.dotfiles/customed_Func-Bind.vim
     
     " ===
     " === VimTex Configurations

@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # ===Some alias created by Jeb===
-alias tmp='cd ~/TMP/'
+alias tmp='cd /tmp'
 alias ggdb='gdb -tui'
 alias pcmr='sudo reflector --country China --sort rate --protocol https --latest 20 --save /etc/pacman.d/mirrorlist'
 alias h='history 0'
@@ -45,7 +45,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -l --color=auto'
 alias l.='ls -d .* --color=auto'
-alias cgvim='nvim ~/.vim/vimrc'
+alias cgvim='nvim /home/jeb/.dotfiles/nvim/init.vim'
 alias cgzsh='nvim ~/.zshrc'
 alias cghypr='nvim ~/.config/hypr/hyprland.conf'
 
@@ -64,9 +64,9 @@ export OUC_SQL_USER="ouc_user"
 export OUC_SQL_PASSWORD="GhaHChrB2658"
 
 # Pyenv 配置
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # 010 Editor 路径
 export PATH="$PATH:/home/jebhim/my_packages/010editor"
