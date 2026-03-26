@@ -6,4 +6,21 @@ AlignConsecutiveAssignments:
   Enabled: true
   AcrossComments: true
   AcrossEmptyLines: false
+  AlignCompound: true
   PadOperators: true
+AlignConsecutiveBitFields: None
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossComments: true
+  AcrossEmptyLines: false
+  AlignFunctionDeclarations: true
+  AlignFunctionPointers: true
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossComments: true
+  AcrossEmptyLines: false
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+  Kind: Always
+IndentCaseLabels: false
