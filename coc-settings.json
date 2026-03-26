@@ -52,6 +52,7 @@
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualTextPrefix": " ❯❯❯ ",
     "diagnostic.virtualText": false,
+    "diagnostic.warningSign": "W",
     "codeLens.enable": true,
     "list.previewHighlightGroup": "Statement",
     "list.nextKeymap": "<C-e>",
@@ -135,9 +136,5 @@
       "$HOME/.cargo/**",
       "$HOME/.rustup/**"
     ],
-    "snippets.ultisnips.pythonPrompt": false,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/21.1.8/clangd_21.1.8/bin/clangd",
-    "clangd.arguments": [
-    "--fallback-style=Google",
-  ]
+    "snippets.ultisnips.pythonPrompt": false
 }
