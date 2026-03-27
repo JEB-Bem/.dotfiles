@@ -11,6 +11,9 @@ alias t='trans :zh -brief -v -e bing'
 alias code='function _code() { command code "$1" --ozone-platform-hint-auto --enable-wayland-ime; }; _code'
 alias open='xdg-open'
 alias ref='/usr/local/bin/pacman_updates.sh'
+# 尽管顺序上来说 setproxy 还没定义，但是我们在真正使用命令时 setproxy 已经注入了
+alias yay='setproxy && yay'
+alias codex='setproxy && codex'
 # 不是很好用，因为没有多少 Man Page 是提供中文的
 # alias man='/usr/local/bin/man_for_jeb.sh'
 
