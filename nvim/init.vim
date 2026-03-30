@@ -42,10 +42,6 @@ set hidden
 
 " Configure end
 
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
 set mouse=a
 set encoding=utf-8
 let &t_ut=''
@@ -93,7 +89,7 @@ map s <nop>
 map Q :q<CR>
 " REPLACE has been covered.
 " Ues VREPLACE instead.
-nnoremap R :source $MYVIMRC \| doautocmd FileType<CR>
+nnoremap R :source $MYVIMRC<CR>
 
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
@@ -561,7 +557,7 @@ if !exists('g:vscode')
     " only when g:mkdp_combine_preview is 1
     let g:mkdp_combine_preview_auto_refresh = 1
     
-    source ~/.dotfiles/snippits.vim
+    source ~/.dotfiles/snippets.vim
     source ~/.dotfiles/paste_image.vim
     
     " ===
