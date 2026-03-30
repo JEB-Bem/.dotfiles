@@ -136,5 +136,7 @@
       "$HOME/.cargo/**",
       "$HOME/.rustup/**"
     ],
-    "snippets.ultisnips.pythonPrompt": false
+    "snippets.extends": {
+      "markdown": ["tex"]
+    }
 }
