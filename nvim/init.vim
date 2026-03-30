@@ -17,7 +17,6 @@ if exists('vscode')
 endif
 
 let mapleader=" "
-syntax on
 set colorcolumn=80
 set nocompatible
 set number
@@ -246,6 +245,10 @@ if !exists('g:vscode')
     " highlight LineNrAbove  guifg=#575369 guibg=NONE          " 设置普通行号的颜色
     " highlight LineNrBelow  guifg=#575369 guibg=NONE          " 设置普通行号的颜色
     
+    " ===
+    " === auto-pairs
+    " ===
+    au Filetype markdown let b:autopairs_loaded=1
     
     " ===
     " === NERDTree
