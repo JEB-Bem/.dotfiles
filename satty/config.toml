@@ -2,13 +2,15 @@
 copy-command = "wl-copy"
 focus-toggles-toolbars = true
 actions-on-right-click = ["save-to-clipboard"]
+output-filename = "~/Pictures/Screenshot/%Y-%m-%d_%H%M%S.png"
+early-exit = true
+corner-roundness = 5
 
 [font]
-family = "WenQuanYi Zen Hei"
+family = "Noto Sans SC"
 style = "Regular"
 
 fallback = [
-    "Noto Sans SC",
     "Noto Sans CJK SC",  # 不知道有没有区别
     "Twemoji"
 ]
